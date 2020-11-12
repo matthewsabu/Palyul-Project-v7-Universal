@@ -1,0 +1,1 @@
+font installations are found in "/src/project/FXML/resources" folder.

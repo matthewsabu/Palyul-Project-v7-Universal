@@ -1,0 +1,64 @@
+.exitBtn{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: white;
+    -fx-font-size: 20pt;
+}
+
+.exitBtn:hover{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: #F97466;
+    -fx-font-size: 20pt;
+}
+
+@font-face {
+    -fx-font-family: Aleo;
+    src: url("/resources/Aleo.otf");
+}
+@font-face {
+    -fx-font-family: Biko;
+    src: url("/resources/Biko_Regular.otf");
+}
+@font-face {
+    -fx-font-family: Intro Cond Light Free;
+    src: url("/resources/Intro Cond Light Free.otf");
+}
+@font-face {
+    -fx-font-family: Homizio Nova;
+    src: url("/resources/regular.ttf");
+}
+
+.minBtn{
+    -fx-background-image: url('icons/dash.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.minBtn:hover{
+    -fx-background-image: url('icons/dash.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: rgb(236,237,167);
+    -fx-border-color:transparent;
+}
+
+.closeBtn{
+    -fx-background-image: url('icons/crossThick.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.closeBtn:hover{
+    -fx-background-image: url('icons/crossThick.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: rgb(236,237,167);
+    -fx-border-color:transparent;
+}

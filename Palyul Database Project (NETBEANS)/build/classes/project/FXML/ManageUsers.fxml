@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1450.0" stylesheets="@manageusers.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.ManageUsersController">
+   <children>
+      <VBox layoutX="847.0" layoutY="454.0" prefHeight="250.0" prefWidth="450.0" styleClass="detailsBox" />
+      <Button fx:id="imageDp" layoutX="942.0" layoutY="132.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#setDp" prefHeight="270.0" prefWidth="260.0" styleClass="imageBtn" />
+      <Label layoutX="34.0" layoutY="99.0" prefHeight="78.0" prefWidth="383.0" styleClass="header" text="Manage Users" />
+      <Label layoutX="891.0" layoutY="472.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Username:" underline="true" />
+      <TextField fx:id="username" layoutX="891.0" layoutY="506.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="username" styleClass="textFields" />
+      <Label layoutX="891.0" layoutY="563.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Password:" underline="true" />
+      <TextField fx:id="password" layoutX="891.0" layoutY="597.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="password" styleClass="textFields" />
+      <RadioButton fx:id="userRadio" layoutX="1011.0" layoutY="654.0" mnemonicParsing="false" onAction="#userOption" selected="true" styleClass="radioBtn" text="User">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="adminRadio" layoutX="1103.0" layoutY="654.0" mnemonicParsing="false" onAction="#adminOption" styleClass="radioBtn" text="Admin" toggleGroup="$userType" />
+      <Label layoutX="891.0" layoutY="654.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="User Type:" underline="true" />
+      <Button fx:id="editUserBtn" layoutX="921.0" layoutY="716.0" mnemonicParsing="false" onMouseClicked="#editUser" prefHeight="31.0" prefWidth="144.0" styleClass="buttons" text="Edit User" />
+      <Label fx:id="statusMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="1182.0" layoutY="794.0" prefHeight="21.0" prefWidth="231.0" styleClass="header3" />
+      <VBox layoutX="42.0" layoutY="194.0" prefHeight="557.0" prefWidth="585.0" styleClass="detailsBox" />
+      <Label layoutX="93.0" layoutY="224.0" styleClass="header2" text="Existing Users:" underline="true">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="existingUsersTableView" layoutX="93.0" layoutY="274.0" onMouseClicked="#selectUser" prefHeight="420.0" prefWidth="480.0">
+          <placeholder>
+            <Label text="" />
+          </placeholder>
+          <columns>
+          <TableColumn fx:id="un" prefWidth="160.0" text="Username" />
+          <TableColumn fx:id="pw" prefWidth="160.0" text="Password" />
+            <TableColumn fx:id="acs" prefWidth="160.0" text="User Type" />
+        </columns>
+      </TableView>
+      <Line endX="13.0" endY="685.0" layoutX="711.0" layoutY="129.0" startX="13.0" startY="-22.0" />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1450.0" styleClass="anchorTop" stylesheets="@adminmenu.css">
+         <children>
+            <Button fx:id="exit" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="60.0" prefWidth="120.0" styleClass="exitBtn" stylesheets="@titlebar.css" text="◄ Exit" />
+            <Button fx:id="closeBtn" layoutX="1410.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#closeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="closeBtn" stylesheets="@titlebar.css" />
+            <Button fx:id="minimizeBtn" layoutX="1370.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#minimizeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="minBtn" stylesheets="@titlebar.css" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="deleteUserBtn" layoutX="1110.0" layoutY="716.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="31.0" prefWidth="144.0" styleClass="buttons" text="Delete User" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,94 @@
+.anchorMain{
+    -fx-background-color: rgb(170,0,0);
+}
+
+.anchorLeftSub{
+    -fx-background-color: rgb(140,0,0);
+}
+
+.loginBox{
+    -fx-background-color: rgb(140,0,0); 
+    -fx-opacity: 20;
+}
+
+.header{
+    -fx-font-family: "Palatino Linotype"; /*Aleo*/
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 25pt;
+}
+
+.header1{
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 18pt;
+}
+
+.header2{
+    -fx-font-family: "Palatino Linotype"; 
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 13pt;
+}
+
+.header3{
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 12pt;
+}
+
+.header4{
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 11pt;
+}
+
+.textFields{
+    -fx-background-color: transparent;
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Times New Roman";
+    -fx-prompt-text-fill: rgb(255,132,116);
+    -fx-text-fill: white;
+    -fx-font-size: 15pt;
+}
+
+.textFields:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Times New Roman";
+    -fx-prompt-text-fill: transparent;
+    -fx-text-fill: white; 
+    -fx-font-size: 15pt;
+}
+
+.signInBtn{
+    -fx-background-color: rgb(236,237,167);
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(170,0,0);
+    -fx-font-size: 11pt;
+}
+
+.signInBtn:hover{
+    -fx-background-color: rgb(251,255,122);
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(170,0,0);
+    -fx-font-size: 11pt;
+}
+
+.forgotPassBtn{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(236,237,167);
+    -fx-font-size: 11pt;
+}
+
+.forgotPassBtn:hover{
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: rgb(251,255,122);
+    -fx-font-size: 11pt;
+}

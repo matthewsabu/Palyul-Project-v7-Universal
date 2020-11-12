@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1450.0" stylesheets="@editentry.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.EditEntryController">
+   <children>
+      <VBox layoutX="34.0" layoutY="183.0" prefHeight="330.0" prefWidth="1110.0" styleClass="detailsBox" />
+      <Label layoutX="34.0" layoutY="99.0" styleClass="header" text="Edit Entries" />
+      <Button fx:id="editEntryBtn" layoutX="1219.0" layoutY="640.0" mnemonicParsing="false" onMouseClicked="#editEntry" prefHeight="31.0" prefWidth="144.0" styleClass="buttons" text="Edit Entry" />
+      <Label fx:id="statusMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="1183.0" layoutY="801.0" prefHeight="21.0" prefWidth="231.0" styleClass="header3" text="No entry selected!" />
+      <Label layoutX="78.0" layoutY="205.0" styleClass="header2" text="Existing Entries:" underline="true">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <TableView fx:id="entriesTableView" layoutX="78.0" layoutY="252.0" onMouseClicked="#displayEntryData" prefHeight="218.0" prefWidth="1020.0">
+          <placeholder>
+            <Label text="" />
+          </placeholder>
+          <columns>
+            <TableColumn fx:id="ornm" prefWidth="104.0" text="OR Number" />
+            <TableColumn fx:id="nm" prefWidth="181.0" text="Name" />
+            <TableColumn fx:id="dtype" prefWidth="99.0" text="D.Type" />
+            <TableColumn fx:id="chknm" prefWidth="148.0" text="Check No." />
+            <TableColumn fx:id="evnt" prefWidth="184.0" text="Event" />
+            <TableColumn fx:id="nts" prefWidth="138.0" text="Notes" />
+            <TableColumn fx:id="amnt" prefWidth="165.0" text="Amount" />
+         </columns>
+      </TableView>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1450.0" styleClass="anchorTop" stylesheets="@adminmenu.css">
+         <children>
+            <Button fx:id="exit" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="60.0" prefWidth="125.0" styleClass="exitBtn" stylesheets="@titlebar.css" text="◄ Exit" />
+            <Button fx:id="closeBtn" layoutX="1410.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#closeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="closeBtn" stylesheets="@titlebar.css" />
+            <Button fx:id="minimizeBtn" layoutX="1370.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#minimizeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="minBtn" stylesheets="@titlebar.css" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="deleteEntryBtn" layoutX="1219.0" layoutY="688.0" mnemonicParsing="false" onMouseClicked="#deleteEntry" prefHeight="31.0" prefWidth="144.0" styleClass="buttons" text="Delete Entry" />
+      <VBox layoutX="34.0" layoutY="525.0" prefHeight="313.0" prefWidth="1110.0" styleClass="detailsBox" />
+      <Label layoutX="75.0" layoutY="550.0" prefHeight="24.0" prefWidth="115.0" styleClass="header1" text="OR Number:" underline="true" />
+      <TextField fx:id="OR" layoutX="75.0" layoutY="584.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="O.R. no." styleClass="textFields" />
+      <Label layoutX="75.0" layoutY="641.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Name:" underline="true" />
+      <TextField fx:id="name" layoutX="75.0" layoutY="675.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="name" styleClass="textFields" />
+      <RadioButton fx:id="cashRadio" layoutX="477.0" layoutY="589.0" mnemonicParsing="false" onAction="#cashOption" selected="true" styleClass="radioBtn" text="Cash">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="checkRadio" layoutX="585.0" layoutY="589.0" mnemonicParsing="false" onAction="#checkOption" styleClass="radioBtn" text="Check">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="477.0" layoutY="550.0" prefHeight="24.0" prefWidth="144.0" styleClass="header1" text="Donation Type:" underline="true" />
+      <Label layoutX="75.0" layoutY="727.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Amount:" underline="true" />
+      <TextField fx:id="amount" layoutX="75.0" layoutY="761.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="amount" styleClass="textFields" />
+      <Label layoutX="475.0" layoutY="690.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Event:" underline="true" />
+      <TextField fx:id="checkNo" layoutX="476.0" layoutY="624.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="265.0" promptText="check No." styleClass="textFields" />
+      <Label layoutX="787.0" layoutY="550.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Notes:" underline="true" />
+      <TextArea fx:id="notes" layoutX="787.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#enableTraversability" prefHeight="182.0" prefWidth="318.0" promptText="notes" styleClass="textArea" />
+      <TextField fx:id="newEvent" layoutX="476.0" layoutY="737.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="265.0" promptText="event" styleClass="textFields" />
+      <VBox layoutX="1165.0" layoutY="263.0" prefHeight="149.0" prefWidth="252.0" styleClass="detailsBox" />
+      <TextField fx:id="searchTF" layoutX="1181.0" layoutY="345.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="225.0" promptText="search" styleClass="textFields" />
+      <ChoiceBox fx:id="searchEventPresents" layoutX="1253.0" layoutY="297.0" prefWidth="150.0" />
+      <Label layoutX="1179.0" layoutY="300.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Search:" underline="true" />
+      <Button fx:id="searchBtn" layoutX="1219.0" layoutY="425.0" mnemonicParsing="false" onMouseClicked="#searchEntry" prefHeight="31.0" prefWidth="144.0" styleClass="buttons" text="Search" />
+      <ComboBox fx:id="events" layoutX="577.0" layoutY="688.0" onAction="#changeEvent" prefWidth="150.0" />
+   </children>
+</AnchorPane>

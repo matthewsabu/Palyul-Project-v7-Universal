@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1450.0" stylesheets="@addentry.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.Controllers.AddEntryController">
+   <children>
+      <VBox layoutX="34.0" layoutY="213.0" prefHeight="313.0" prefWidth="761.0" styleClass="detailsBox" stylesheets="@addentry.css" />
+      <Label layoutX="34.0" layoutY="99.0" styleClass="header" text="Add Entries">
+         <font>
+            <Font name="Palatino Linotype" size="48.0" />
+         </font></Label>
+      <Label layoutX="75.0" layoutY="238.0" prefHeight="30.0" prefWidth="134.0" styleClass="header1" text="OR Number:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <TextField fx:id="OR" layoutX="75.0" layoutY="272.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="O.R. no." styleClass="textFields" />
+      <Label layoutX="75.0" layoutY="329.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Name:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <TextField fx:id="name" layoutX="75.0" layoutY="363.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="name" styleClass="textFields" />
+      <RadioButton fx:id="cashRadio" layoutX="477.0" layoutY="277.0" mnemonicParsing="false" onAction="#cashOption" styleClass="radioBtn" text="Cash">
+         <toggleGroup>
+            <ToggleGroup fx:id="userType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="checkRadio" layoutX="585.0" layoutY="277.0" mnemonicParsing="false" onAction="#checkOption" selected="true" styleClass="radioBtn" text="Check" toggleGroup="$userType" />
+      <Label layoutX="477.0" layoutY="238.0" prefHeight="30.0" prefWidth="170.0" styleClass="header1" text="Donation Type:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <Button fx:id="addEntryBtn" layoutX="608.0" layoutY="550.0" mnemonicParsing="false" onMouseClicked="#addEntry" prefHeight="31.0" prefWidth="144.0" styleClass="addEntryBtn" text="Add Entry">
+         <font>
+            <Font name="Palatino Linotype" size="15.0" />
+         </font></Button>
+      <Label fx:id="statusMsg" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="564.0" layoutY="729.0" prefHeight="21.0" prefWidth="231.0" styleClass="header3" />
+      <VBox layoutX="952.0" layoutY="182.0" prefHeight="557.0" prefWidth="436.0" styleClass="detailsBox" stylesheets="@addentry.css" />
+      <Label layoutX="1078.0" layoutY="213.0" styleClass="header2" text="Existing Entries:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="26.0" />
+         </font>
+      </Label>
+      <TableView fx:id="partialEntriesTableView" layoutX="1003.0" layoutY="262.0" prefHeight="420.0" prefWidth="340.0">
+          <placeholder>
+            <Label text="" />
+          </placeholder>
+          <columns>
+            <TableColumn fx:id="ornum" prefWidth="115.0" text="OR Number" />
+            <TableColumn fx:id="amt" prefWidth="115.0" text="Amount" />
+            <TableColumn fx:id="evt" prefWidth="109.0" text="Event" />
+         </columns>
+      </TableView>
+      <Line endX="13.0" endY="685.0" layoutX="871.0" layoutY="129.0" startX="13.0" startY="-22.0" />
+      <Label layoutX="75.0" layoutY="415.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Amount:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <TextField fx:id="amount" layoutX="75.0" layoutY="449.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="350.0" promptText="amount" styleClass="textFields" />
+      <Label layoutX="475.0" layoutY="378.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Event:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <TextField fx:id="checkNo" layoutX="476.0" layoutY="312.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="265.0" promptText="check No." styleClass="textFields" />
+      <VBox layoutX="34.0" layoutY="547.0" prefHeight="220.0" prefWidth="520.0" styleClass="detailsBox" stylesheets="@addentry.css" />
+      <Label layoutX="74.0" layoutY="567.0" prefHeight="24.0" prefWidth="102.0" styleClass="header1" text="Notes:" textFill="#eceda7" underline="true">
+         <font>
+            <Font name="Palatino Linotype" size="20.0" />
+         </font></Label>
+      <TextArea fx:id="notes" layoutX="74.0" layoutY="600.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#enableTraversability" prefHeight="130.0" prefWidth="430.0" promptText="notes" styleClass="textArea" />
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1450.0" styleClass="anchorTop" stylesheets="@adminmenu.css">
+         <children>
+            <Button fx:id="exit" layoutY="-2.0" mnemonicParsing="false" onMouseClicked="#exit" prefHeight="60.0" prefWidth="125.0" styleClass="exitBtn" stylesheets="@titlebar.css" text="◄ Exit">
+               <font>
+                  <Font name="Palatino Linotype" size="20.0" />
+               </font></Button>
+            <Button fx:id="closeBtn" layoutX="1410.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#closeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="closeBtn" stylesheets="@titlebar.css" />
+            <Button fx:id="minimizeBtn" layoutX="1370.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#minimizeScreen" prefHeight="25.0" prefWidth="25.0" styleClass="minBtn" stylesheets="@titlebar.css" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="newEvent" disable="true" layoutX="476.0" layoutY="425.0" onMouseClicked="#enableTraversability" prefHeight="40.0" prefWidth="265.0" promptText="event" styleClass="textFields" />
+      <ComboBox fx:id="events" layoutX="577.0" layoutY="376.0" onAction="#changeEvent" prefWidth="150.0" />
+   </children>
+</AnchorPane>

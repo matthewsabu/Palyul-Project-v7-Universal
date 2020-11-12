@@ -1,0 +1,5 @@
+Custom Fonts Instructions:
+
+> Install fonts in this folder and replace the fonts
+in the -fx-font-family: css property with the commented 
+fonts in every css file.

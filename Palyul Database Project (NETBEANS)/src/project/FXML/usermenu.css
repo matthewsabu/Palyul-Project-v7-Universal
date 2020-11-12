@@ -1,0 +1,139 @@
+.anchorTop{
+    -fx-background-color: rgb(170,0,0);
+}
+
+.iconVbox{
+    -fx-background-image: url('bgs/redBG.jpg');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+}
+
+.header{
+    -fx-font-family: "Palatino Linotype"; /*Intro Cond Light Free*/
+    -fx-text-fill: black;
+    -fx-font-size: 40pt;
+}
+
+.header1{
+    -fx-font-family: "Palatino Linotype"; /*Homizio Nova*/
+    -fx-text-fill: black;
+    -fx-font-size: 30pt;
+}
+
+.header2{
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: black;
+    -fx-font-size: 28pt;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+.header3{
+    -fx-font-family: "Palatino Linotype"; /*Intro Cond Light Free*/
+    -fx-text-fill: black;
+    -fx-font-size: 20pt;
+}
+
+.header4{
+    -fx-font-family: "Palatino Linotype";
+    -fx-text-fill: black;
+    -fx-font-size: 15pt;
+}
+
+.addEntry{
+    -fx-background-image: url('icons/addEntry.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.addEntry:hover{
+    -fx-background-image: url('icons/addEntryHover.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.editEntry{
+    -fx-background-image: url('icons/editEntry.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.editEntry:hover{
+    -fx-background-image: url('icons/editEntryHover.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.viewEntries{
+    -fx-background-image: url('icons/viewEntries.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.viewEntries:hover{
+    -fx-background-image: url('icons/viewEntriesHover.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.settings{
+    -fx-background-image: url('icons/settings.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.settings:hover{
+    -fx-background-image: url('icons/settingsHover.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.previous{
+    -fx-background-image: url('icons/previous.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.previous:hover{
+    -fx-background-image: url('icons/previous.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: #E7E7E1;
+    -fx-border-color:transparent;
+}
+
+.next{
+    -fx-background-image: url('icons/next.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-border-color:transparent;
+}
+
+.next:hover{
+    -fx-background-image: url('icons/next.png');
+    -fx-background-position: center center;
+    -fx-background-size: 100% 100%;
+    -fx-background-color: #E7E7E1;
+    -fx-border-color:transparent;
+}
+
+

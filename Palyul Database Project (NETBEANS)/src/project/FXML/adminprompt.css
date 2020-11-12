@@ -1,0 +1,75 @@
+.anchorTop{
+    -fx-background-color: #FFF780;
+}
+
+@font-face {
+    -fx-font-family: Aleo;
+    src: url("/resources/Aleo.otf");
+}
+@font-face {
+    -fx-font-family: Biko;
+    src: url("/resources/Biko_Regular.otf");
+}
+@font-face {
+    -fx-font-family: Intro Cond Light Free;
+    src: url("/resources/Intro Cond Light Free.otf");
+}
+@font-face {
+    -fx-font-family: Homizio Nova;
+    src: url("/resources/regular.ttf");
+}
+
+.header{
+    -fx-font-family: "Intro Cond Light Free";
+    -fx-text-fill: black;
+    -fx-font-size: 16pt;
+    -fx-border-color: red;
+    -fx-border-width: 1 0 1 0;
+    -fx-background-radius: 0px;
+}
+
+.header1{
+    -fx-font-family: "Homizio Nova";
+    -fx-text-fill: rgb(0,0,0);
+    -fx-font-size: 15pt;
+}
+
+.enterBtn{
+    -fx-background-color: rgb(168,209,229);
+    -fx-border-color: rgb(50,151,170);
+    -fx-border-width: 1pt;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.enterBtn:hover{
+    -fx-background-color: rgb(50,151,170);
+    -fx-border-color: rgb(50,151,170);
+    -fx-border-width: 1pt;
+    -fx-border-radius: 5 5 5 5;
+    -fx-background-radius: 5 5 5 5;
+}
+
+.textFields{
+    /*-fx-background-color: rgb(255,193,193);*/
+    -fx-background-color: transparent;
+    -fx-border-color: grey;
+    /*-fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0px;*/
+    -fx-font-family: "Intro Cond Light Free";
+    -fx-prompt-text-fill: grey;
+    -fx-text-fill: black;
+    -fx-font-size: 15pt;
+}
+
+.textFields:focused {
+    /*-fx-background-color: rgb(255,255,255);*/
+    -fx-background-color: transparent;
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-radius: 0px;
+    -fx-font-family: "Intro Cond Light Free";
+    -fx-prompt-text-fill: transparent;
+    -fx-text-fill: black; /*rgb(170,0,0)*/
+    -fx-font-size: 15pt;
+}
